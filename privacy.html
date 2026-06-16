@@ -60,7 +60,7 @@
         <nav class="crumbs"><a href="index.html">&larr; GameWeave home</a></nav>
 
         <h1>Privacy Policy</h1>
-        <p class="meta"><strong>Effective date:</strong> May 10, 2026 &middot; <strong>Last updated:</strong> May 10, 2026</p>
+        <p class="meta"><strong>Effective date:</strong> May 10, 2026 &middot; <strong>Last updated:</strong> June 16, 2026</p>
 
         <p>GameWeave is operated by <strong>Boris Rayskiy</strong> ("we", "us"). This policy explains what information the GameWeave Android app and its server collect, how that information is used, and the choices you have about it.</p>
 
@@ -75,7 +75,7 @@
 
         <h3>2.1 Information you give us</h3>
         <ul>
-            <li><strong>Email address.</strong> Required to create an account, sign in, and reset a forgotten password. Stored on our server as the unique account identifier.</li>
+            <li><strong>Email address.</strong> Required to create an account, sign in, verify your email address, and reset a forgotten password. Stored on our server as the unique account identifier. We send a verification email to confirm the address; an unverified email can sign in and play but cannot make in-app purchases until verified.</li>
             <li><strong>Password.</strong> Stored only as a one-way bcrypt hash. We never store, log, or transmit your plaintext password after the moment you submit it for sign-in, sign-up, or password reset.</li>
             <li><strong>Display name.</strong> A name shown to other players at a game table. You provide this during sign-up and can change it from the Profile screen. If you leave it blank, the service may create a default display name from the part of your email address before the <code>@</code> symbol, so choose a display name that does not reveal information you want to keep private.</li>
             <li><strong>Avatar image.</strong> Optional. If you upload an avatar, the image is stored in Google Cloud Storage and the URL pointing to it is associated with your account. Avatars are intended to be visible to other players. You can remove or replace your avatar from the Profile screen.</li>
@@ -98,7 +98,7 @@
 
         <h2>3. How we use your information</h2>
         <ul>
-            <li><strong>Operate the Service.</strong> Create and authenticate accounts, route real-time game traffic, run tables, render the lobby and profile, maintain chip balances, process purchase credits, and process password-reset requests.</li>
+            <li><strong>Operate the Service.</strong> Create and authenticate accounts, route real-time game traffic, run tables, render the lobby and profile, maintain chip balances, process purchase credits, and send email-verification and password-reset messages.</li>
             <li><strong>Secure the Service.</strong> Detect abuse, debug errors, prevent fraud, validate Google Play Billing receipts, enforce these Terms, and protect users and our systems.</li>
             <li><strong>Improve the Service.</strong> Diagnose crashes, measure connection reliability, understand which games and flows are used, and prioritize fixes.</li>
             <li><strong>Communicate with you.</strong> Respond to support, privacy, account-deletion, and data-export requests. We do not send marketing email.</li>
@@ -113,6 +113,7 @@
             <li><strong>Legitimate interests.</strong> To secure the Service, prevent fraud and abuse, debug errors, measure reliability, improve the product, and keep basic operational records. We balance these interests against your privacy rights.</li>
             <li><strong>Legal obligation.</strong> To retain and disclose information when required for tax, accounting, consumer-protection, law-enforcement, or other legal obligations.</li>
             <li><strong>Consent.</strong> Where we ask for consent for an optional feature or permission, you may withdraw it through the app, your device settings, or by contacting us. Withdrawal does not affect processing that happened before withdrawal.</li>
+            <li><strong>No automated decision-making.</strong> We do not use automated decision-making or profiling that produces legal or similarly significant effects about you.</li>
         </ul>
 
         <h2>5. How we share your information</h2>
@@ -120,7 +121,7 @@
         <ul>
             <li><strong>Google Cloud Platform</strong> &mdash; hosts our server, database, Cloud Logging, telemetry storage when configured, and avatar image storage. Subject to <a href="https://cloud.google.com/security/privacy">Google Cloud's privacy and security commitments</a>.</li>
             <li><strong>Google Play / Google Play Billing</strong> &mdash; handles in-app purchases of virtual chip packs. Google processes payment details under Google's own policies. GameWeave receives purchase identifiers and validation/refund information needed to credit, consume, audit, and reverse purchases.</li>
-            <li><strong>Email and support tools.</strong> GameWeave currently uses internal password-reset and support handling. If we add a third-party transactional email or support provider, that provider may receive the email address and message content needed to deliver or respond to your request.</li>
+            <li><strong>SendGrid (Twilio)</strong> &mdash; our transactional email provider. To deliver account-verification and password-reset emails, SendGrid receives your email address and the message content needed to send them. SendGrid processes this data on our behalf as a service provider. For other support and privacy requests we use ordinary email handling.</li>
             <li><strong>Legal and safety recipients.</strong> We may disclose information if required by law, subpoena, court order, or other legal process, or when we believe disclosure is necessary to protect our rights, users, or systems.</li>
             <li><strong>Business transfers.</strong> If GameWeave is involved in a merger, acquisition, reorganization, or asset sale, user information may be transferred as part of that transaction, subject to this policy or a replacement policy disclosed to you.</li>
         </ul>
@@ -141,14 +142,15 @@
             <li><strong>Edit your profile.</strong> You can change your display name and avatar from the Profile screen.</li>
             <li><strong>Delete your account.</strong> You can request deletion using the public account-deletion instructions at <a href="delete-account.html">https://brayskiy.github.io/gameweave-legal/delete-account.html</a> or by emailing us at the address below. We will delete or de-identify your account, profile, avatar image, and per-game statistics within 30 days after we verify the request, subject to records we must retain for legal, accounting, tax, security, fraud-prevention, or dispute reasons.</li>
             <li><strong>Export your data.</strong> Email us and we will send you a JSON export of the data tied to your account within 30 days after verifying the request.</li>
+            <li><strong>Authorized agents.</strong> You may submit a deletion, export, or other privacy-rights request through an authorized agent who provides written proof of authorization; we may still ask you to verify your identity directly before we act on the request.</li>
             <li><strong>Sign out.</strong> You can sign out of the app at any time from the menu. Sign-out invalidates the refresh token; later sessions require a fresh sign-in.</li>
             <li><strong>Device controls.</strong> You can use Android settings to manage app permissions, clear local app storage, or uninstall the app. Clearing local storage or uninstalling the app does not delete server-side account data.</li>
         </ul>
         <p>If you are in the European Union, the United Kingdom, California, or another jurisdiction with privacy rights, you may have rights to access, correct, delete, port, restrict, or object to certain processing of your personal information. You may also have the right to appeal or lodge a complaint with a supervisory authority. To exercise these rights, contact us using the details below.</p>
-        <p>California residents: we do not sell or share personal information as those terms are commonly used for cross-context behavioral advertising, and we do not use sensitive personal information to infer characteristics.</p>
+        <p>California residents: we do not sell or share personal information as those terms are commonly used for cross-context behavioral advertising, and we do not use sensitive personal information to infer characteristics. California residents also have the right not to receive discriminatory treatment for exercising their privacy rights; we do not deny the Service, charge different prices, or provide a different level or quality of service because you exercised a privacy right.</p>
 
         <h2>8. Security</h2>
-        <p>Passwords are hashed with bcrypt before storage. All traffic between the app and our server is encrypted in transit (HTTPS for HTTP requests, WSS for WebSocket connections). Access to production infrastructure is limited to operational needs. Avatar uploads are checked for valid image content before being stored.</p>
+        <p>Passwords are hashed with bcrypt before storage. In production builds, all traffic between the app and our server is encrypted in transit (HTTPS for requests, WSS for WebSocket connections); development and debug builds may connect to a local or custom server over an unencrypted connection. Authentication tokens and the local install identifier are stored in app-private storage and are excluded from Android's automatic cloud backup and device-to-device transfer, so they are not copied to backup servers or restored onto another device &mdash; after reinstalling or restoring the app you must sign in again. Access to production infrastructure is limited to operational needs. Avatar uploads are checked for valid image content before being stored.</p>
         <p>No system is perfectly secure. If we discover a breach affecting your data, we will notify you within the timeframes required by applicable law.</p>
 
         <h2>9. International transfers</h2>
@@ -161,6 +163,7 @@
         <h2>11. Contact</h2>
         <p>Questions, account deletion requests, data export requests, and privacy rights requests:</p>
         <ul>
+            <li><strong>Data controller:</strong> Boris Rayskiy (United States). A postal address for formal legal notices is available on request to the email below.</li>
             <li><strong>Email:</strong> <a href="mailto:brayskiy@gmail.com">brayskiy@gmail.com</a></li>
         </ul>
         <p>We will respond within 30 days unless applicable law allows or requires a different response period.</p>
